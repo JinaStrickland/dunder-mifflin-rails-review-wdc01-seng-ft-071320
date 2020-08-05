@@ -2,6 +2,6 @@
 
 <ul>
         <% @employees.each do |employee| %>
-    <li> <%= employee.first_name + " " + employee.last_name %> </li>
+    <li> <%= link_to employee.first_name + ' ' + employee.last_name, employee_path(employee.id) %> </li>
         <% end %>
 </ul>

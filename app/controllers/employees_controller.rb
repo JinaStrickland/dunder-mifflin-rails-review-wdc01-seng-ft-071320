@@ -10,4 +10,9 @@ class EmployeesController < ApplicationController
         render :show 
     end
 
+    def new
+        @employee = Employee.new
+        render :new
+    end
+
 end
