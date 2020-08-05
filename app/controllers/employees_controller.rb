@@ -15,4 +15,16 @@ class EmployeesController < ApplicationController
         render :new
     end
 
+    def create
+        first_name = params["employee"]["first_name"]
+        last_name = params["employee"]["last_name"]
+        ali = params["employee"]["alias"]
+        title = params["employee"]["title"]
+        office = params["employee"]["office"]
+        image = params["employee"]["img_url"]
+        dog = params["employee"]["dog_id"]
+        employee = Employee.create(first_name: first_name, last_name: last_name, alias: ali, title: title, office: office, img_url: image, dog_id: dog)
+        redirect_to employee_path(employee)
+    end
+
 end

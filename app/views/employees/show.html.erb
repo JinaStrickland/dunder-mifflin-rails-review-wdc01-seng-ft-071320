@@ -7,8 +7,10 @@
     <li>Title: <%= @employee.title %></li>
     <li>Office: <%= @employee.office %></li>
     <li>Dog name: <%= @employee.dog.name %></li>
-    <li>Picture: <a href="<%= @employee.img_url %>" > </a></li>
+    <%= image_tag @employee.img_url %>
+
 
 </ul>
+
 
 <%= link_to 'Back to homepage', employees_path %>

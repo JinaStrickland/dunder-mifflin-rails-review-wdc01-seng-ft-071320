@@ -5,3 +5,6 @@
     <li> <%= link_to employee.first_name + ' ' + employee.last_name, employee_path(employee.id) %> </li>
         <% end %>
 </ul>
+
+
+<%= link_to 'Create new employee', new_employee_path %>
